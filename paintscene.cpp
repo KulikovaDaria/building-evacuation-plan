@@ -32,7 +32,7 @@ void paintScene::mousePressEvent(QGraphicsSceneMouseEvent *event) {
         if(fabs(begin.x() - end.x()) > 50 && fabs(begin.y() - end.y()) > 50) {
 
             QMessageBox::warning(0, "Information",
-                        "Линии должны быть горизонтальные либо вертикальные");
+                        "Lines must be horizontal or vertical");
         }
         else {
         addEllipse((int) (begin.x() - 1 + 0.5),

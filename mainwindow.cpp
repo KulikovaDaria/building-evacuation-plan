@@ -52,14 +52,14 @@ void MainWindow::on_addPeople_clicked() {
 }
 
 void MainWindow::on_addEnter_clicked() {
-    setThroughput* th = new setThroughput("Пропускная способность выхода", this);
+    setThroughput* th = new setThroughput("The throughput of exit", this);
     th->exec();
     int throughput = th->getThroughput();
     scene.setPaintingState("enter", throughput);
 }
 
 void MainWindow::on_generatePeople_clicked() {
-    setThroughput* th = new setThroughput("Количество людей", this);
+    setThroughput* th = new setThroughput("Number of people", this);
     th->exec();
     int amount = th->getThroughput();
     srand(unsigned(time(0)));
@@ -75,7 +75,7 @@ void MainWindow::on_generatePeople_clicked() {
 }
 
 void MainWindow::on_upLoad_clicked() {
-    QString path = QFileDialog::getOpenFileName(this, "Выберите файл", "C:", "*.jpg ;; *.jpeg ;; *.png");
+    QString path = QFileDialog::getOpenFileName(this, "Choose a file", "C:", "*.jpg ;; *.jpeg ;; *.png");
     if (path == "") {
         return;
     }
@@ -96,23 +96,24 @@ void MainWindow::on_evacuation_clicked() {
     int t = image->time;
     QString str;
         str.setNum(t);
-        if(t % 10 == 1) {
-            str += " минуту";
-        }
-        else if(t%10 > 1 && t%10 < 5) {
-            str += " минуты";
-        }
-        else {
-            str += " минут";
-        }
-    QMessageBox::about(this, "Время эвакуации", "Время эвакуации составило " + str);
+        //str += " minutes";
+        //if(t % 10 == 1) {
+        //    str += " минуту";
+        //}
+        //else if(t%10 > 1 && t%10 < 5) {
+        //    str += " минуты";
+        //}
+        //else {
+        //    str += " минут";
+        //}
+    QMessageBox::about(this, "The evacuation time", "The evacuation time was " + str);
 }
 
 void MainWindow::on_save_clicked() {
     QPixmap pix = QPixmap::grabWidget(ui->graphicsView);
         QImage img = pix.toImage();
         QString path = QFileDialog::getSaveFileName(this,
-                                        "Сохранить план эвакуации",
+                                        "Save the evacuation plan",
                                         "",
                                         "*.png ;; *.jpg ;; *.bmp"
                                         );

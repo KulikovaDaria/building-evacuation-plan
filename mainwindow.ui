@@ -40,7 +40,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Сгенерировать расположение людей</string>
+     <string>Generate the location of people automatically</string>
     </property>
    </widget>
    <widget class="QPushButton" name="addPeople">
@@ -53,7 +53,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Добавить человека вручную</string>
+     <string>Add a person manually</string>
     </property>
    </widget>
    <widget class="QPushButton" name="addEnter">
@@ -66,7 +66,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Добавить выход из помещения</string>
+     <string>Add an exit</string>
     </property>
    </widget>
    <widget class="QWidget" name="horizontalLayoutWidget">
@@ -94,7 +94,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Загрузить план помещения</string>
+        <string>Upload a floor plan</string>
        </property>
       </widget>
      </item>
@@ -116,7 +116,7 @@
         <number>-1</number>
        </property>
        <property name="text">
-        <string>Нарисовать план помещения</string>
+        <string>Draw a floor plan</string>
        </property>
       </widget>
      </item>
@@ -135,7 +135,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Запустить эвакуацию</string>
+        <string>Start evacuation</string>
        </property>
       </widget>
      </item>
@@ -154,7 +154,7 @@
         </size>
        </property>
        <property name="text">
-        <string>Сохранить план</string>
+        <string>Save the evacuation plan</string>
        </property>
       </widget>
      </item>
